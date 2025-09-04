@@ -17,6 +17,7 @@ const SearchBar = () => {
   };
 
   return (
+   
     <div className="items-center px-4 flex justify-center">
       <div className="relative mr-3">
         <div className="absolute top-3 left-3 items-center" ref={clickPoint}>
@@ -35,9 +36,9 @@ const SearchBar = () => {
         </div>
         <input
           type="text"
-          className="block p-2 pl-10 w-[210%]  text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:pl-3"
-          placeholder="Søk etter produkter, kategori, merke"
-          onFocus={handleFocus}
+          className="block p-2 pl-10 md:w-full  text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:pl-3"
+          placeholder="Søk etter produkter.."
+          onFocus={handleFocus} 
           onBlur={handleBlur}
         />
       </div>
