@@ -23,7 +23,7 @@ const ProductPage: React.FC<ProductPageProps> = ({
               width={300}
               height={500}
               alt={product.imageAlt}
-              className="object-contain"
+              className="object-contain m-2"
             />
           </div>
         </div>
