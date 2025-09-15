@@ -59,7 +59,7 @@ const HamburgerMenu = () => {
               Gaming
             </div>
           </a>
-          <a href="/contact" className="block px-4 py-2 hover:bg-gray-100">
+          <a href="/mobil-nettbrett-og-smartklokker" className="block px-4 py-2 hover:bg-gray-100">
             <div className="flex">
               <Image
                 src="/mobile-icon.avif"
