@@ -34,7 +34,7 @@ export default function Home() {
                   description: "Smarttelefon, 6,7\" Super Retina XDR, A18 Pro chip, 48MP kamera, USB-C, IP68",
                   color: "Space Black",
                   price: "14 990,-",
-                  href: "/products/iphone16pro",
+                  href: "/product/mobil-nettbrett-og-smartklokker/mobiltelefon/apple-iphone-16-pro",
                   rating: 4.5,
                 },
                 {

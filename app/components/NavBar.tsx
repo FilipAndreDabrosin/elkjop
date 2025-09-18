@@ -1,8 +1,14 @@
+"use client";
+
 import Image from "next/image";
 import SearchBar from "./SearchBar";
 import HamburgerMenu from "./HamburgerMenu";
+import Link from "next/link";
+import { useCart } from "../hooks/useCart";
 
 const NavBar = () => {
+  // Get cart functions from our simple cart hook
+  const { getTotalItems } = useCart();
   return (
     <nav className="">
       <div>
@@ -34,17 +40,24 @@ const NavBar = () => {
               <p className="pl-2 pr-4 text-sm text-[#041753]">Logg inn</p>
             </div>
 
-            <a href="/handlekurv">
-              <div className="flex flex-col items-center justify-end hover:cursor-pointer text-center">
-                <Image
-                  src="/cart-outline.svg"
-                  alt="Handlekurv ikon"
-                  width={30}
-                  height={30}
-                />
+            <Link href="/handlekurv">
+              <div className="flex flex-col items-center justify-end hover:cursor-pointer text-center relative">
+                <div className="relative">
+                  <Image
+                    src="/cart-outline.svg"
+                    alt="Handlekurv ikon"
+                    width={30}
+                    height={30}
+                  />
+                  {getTotalItems() > 0 && (
+                    <span className="absolute -top-2 -right-2 bg-[#6AA334] text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
+                      {getTotalItems()}
+                    </span>
+                  )}
+                </div>
                 <p className="pl-2 pr-4 text-sm text-[#041753]">Handlekurv</p>
               </div>
-            </a>
+            </Link>
           </div>
         </div>
       </div>

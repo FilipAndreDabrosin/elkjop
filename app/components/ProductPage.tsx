@@ -2,6 +2,9 @@
 import Image from "next/image";
 import { Product, ProductPhoneSpecifications } from "../types/Product";
 import { Rating, Typography } from "@material-tailwind/react";
+import { useCart } from "../hooks/useCart";
+
+// Ville lagt til en fargevelger, men har ikke fått tid til å se på det enda.
 
 type ProductPageProps = {
   product: Product;
@@ -12,6 +15,7 @@ const ProductPage: React.FC<ProductPageProps> = ({
   product,
   specifications,
 }) => {
+  const { addToCart } = useCart();
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -64,7 +68,10 @@ const ProductPage: React.FC<ProductPageProps> = ({
           </div>
           {/* Add to Cart Button */}
           <div className="pt-4">
-            <button className="w-full bg-[#6AA334] hover:bg-[#5b8d2d] text-white font-semibold py-3 px-6 rounded-lg transition duration-300">
+            <button 
+              onClick={() => addToCart(product)}
+              className="w-full bg-[#6AA334] hover:bg-[#5b8d2d] text-white font-semibold py-3 px-6 rounded-lg transition duration-300"
+            >
               Legg i handlekurv
             </button>
           </div>
@@ -93,6 +100,10 @@ const ProductPage: React.FC<ProductPageProps> = ({
               <div>
                 <span className="font-medium text-gray-600">Prossesor:</span>
                 <p>{specifications.processor}</p>
+              </div>
+              <div>
+                <span className="font-medium text-gray-600">Farge</span>
+                <p>{product.color}</p>
               </div>
             </div>
           </div>
