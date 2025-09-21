@@ -20,6 +20,20 @@
 }
 */
 
+@font-face {
+  font-family: "Montserrat";
+  src: url("/fonts/Montserrat/Montserrat-VariableFont-wght.tff") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("/fonts/Montserrat/Montserrat-Italic-VariableFont-wght.ttf") format("truetype");
+  font-weight: 100 900; 
+  font-style: italic;
+}
+
 
 body {
   background: var(--background);
