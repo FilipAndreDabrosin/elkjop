@@ -2,6 +2,12 @@
 import React, { useState } from "react";
 import Image from "next/image";
 
+/* 
+Hamburger meny som viser en dropdown. 
+Desverre er den hardcoded så den er ikke noe særlig reusable. 
+Hvis jeg hadde hatt mer tid så ville jeg gjort den mer reusable.
+*/
+
 const HamburgerMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -11,6 +17,7 @@ const HamburgerMenu = () => {
 
   return (
     <div className="relative">
+      {/* Animasjon for hamburger menyen */}
       <button
         onClick={handleClick}
         className="flex flex-col justify-center items-center hover:cursor-pointer p-4"
@@ -34,6 +41,7 @@ const HamburgerMenu = () => {
                       }`}
         ></span>
       </button>
+      {/* Dropdown menyen som vises hvis isOpen er true. */}
       {isOpen && (
         <div className="absolute left-0 mt-2 w-40 bg-white shadow-lg rounded-lg py-2 z-50 text-[#041753] ">
           <p className="text-center shadow-sm font-bold text-xl mb-2">Alle kategorier</p>

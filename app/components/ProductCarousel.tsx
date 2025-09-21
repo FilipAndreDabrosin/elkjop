@@ -1,8 +1,10 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 import { useRef } from "react";
 import { Rating, Typography } from "@material-tailwind/react"
 import { Product } from "../types/Product";
+
 
 type ProductCarouselProps = {
   products: Product[];
@@ -75,23 +77,23 @@ const ProductCarousel: React.FC<ProductCarouselProps> = ({ products, title }) =>
                   <div className="flex justify-between items-start">
                     <div className="flex-1 mr-2">
                       <div className="mb-2">
-                        {/* @ts-ignore */}
+                        {/* @ts-expect-error: Rating component bruker jsx */}
                         <Rating 
                           value={Math.floor(product.rating)} 
                           readonly 
                           className="flex items-center gap-1"
                           placeholder=""
                         />
-                        {/* @ts-ignore */}
+                        {/* @ts-expect-error: Rating component bruker jsx */}
                         <Typography color="gray" className="text-xs">
                             {product.rating} av 5
                         </Typography>
                       </div>
                       <h3 className="text-sm font-medium text-gray-900 line-clamp-2">
-                        <a href={product.href}>
+                        <Link href={product.href}>
                           <span aria-hidden="true" className="absolute inset-0" />
                           {product.name}
-                        </a>
+                        </Link>
                       </h3>
                       <p className="mt-1 text-sm text-gray-500">
                         {product.color}

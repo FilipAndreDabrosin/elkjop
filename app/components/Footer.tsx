@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -7,14 +8,14 @@ const Footer = () => {
         <div className="container mx-auto py-14 px-6">
           <div className="grid md:grid-cols-12 grid-cols-1 gap-7">
             <div className="lg:col-span-4 col-span-12">
-              <a href="/" className="col-span-2">
+              <Link href="/" className="col-span-2">
                 <Image
                   src="/elkjop_logo_footer.svg"
                   width={150}
                   height={100}
                   alt="Elkjøp logo"
                 />
-              </a>
+              </Link>
               <p className="mt-6  text-xs text-gray-400">
                 ©2025 Elkjøp Norge AS. Alle rettigheter reservert <br />
                 Org nr.: NO947 054 600MVA
@@ -26,20 +27,20 @@ const Footer = () => {
               </h5>
               <ul className="list-none mt-6 space-y-2">
                 <li>
-                  <a
+                  <Link
                     href="/om-oss"
                     className="transition-all ease-in-out"
                   >
                     Om oss
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
+                  <Link
                     href="/kontakt-oss"
                     className="transition-all ease-in-out"
                   >
                     Kontakt oss
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -49,20 +50,20 @@ const Footer = () => {
               </h5>
               <ul className="list-none mt-6 space-y-2">
                 <li>
-                  <a
+                  <Link
                     href="/finn-butikk"
                     className=" transition-all ease-in-out"
                   >
                     Finn butikk
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
+                  <Link
                     href="/kundeklubb"
                     className="transition-all ease-in-out"
                   >
                     Kundeklubb
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>

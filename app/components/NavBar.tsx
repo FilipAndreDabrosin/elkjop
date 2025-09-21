@@ -11,14 +11,14 @@ const NavBar = () => {
   return (
     <nav className="w-full shadow-xs bg-white">
       <div className="mx-auto md:max-w-[1600px] w-full flex py-2 px-4 items-center">
-        <a href="/">
+        <Link href="/">
           <Image
             src="/Elkjop_logo_blue.png"
             alt="Elkjøp Logo"
             width={150}
             height={50}
           />
-        </a>
+        </Link>
         <div className="ml-auto flex">
           <div className="flex items-center justify-items-start w-[210%]">
             <SearchBar />

@@ -31,13 +31,13 @@ const loadFromLocalStorage = () => {
     if (saved) {
       globalCartItems = JSON.parse(saved);
     }
-  } catch (error) {}
+  } catch {} {}
 };
 // Lagrer til cart itemen
 const saveToLocalStorage = (items: CartItem[]) => {
   try {
     localStorage.setItem("cart", JSON.stringify(items));
-  } catch (error) {
+  } catch {} {
   }
 };
 

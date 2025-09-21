@@ -39,14 +39,14 @@ const ProductPage: React.FC<ProductPageProps> = ({
               {product.name}
             </h1>
             <div className="flex items-center space-x-2">
-              {/* @ts-ignore */}
+              {/* @ts-expect-error: Rating component bruker jsx. */}
               <Rating
                 value={Math.floor(product.rating)}
                 readonly
                 className="flex items-center gap-1"
                 placeholder=""
               />
-              {/* @ts-ignore */}
+              {/* @ts-expect-error: Rating component bruker jsx. */}
               <Typography className="text-gray-600">
                 ({product.rating} av 5)
               </Typography>
