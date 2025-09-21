@@ -109,7 +109,7 @@ export default function CartPage() {
             {getTotalPrice()}
           </span>
         </div>
-        {/* Knappen ville ført deg til en kasse side, men det har jeg rett og slett ikke til å få laget og jeg vil heller prioritere andre ting på nettsiden*/}
+        {/* Knappen ville ført deg til en kasse side, men det har jeg rett og slett ikke tid til å få laget og jeg vil heller prioritere andre ting på nettsiden*/}
         <div className="space-y-3">
           <button className="w-full bg-[#6AA334] hover:bg-[#5d902d] text-white font-semibold py-3 px-6 rounded-lg transition duration-300">
             Gå til kassen

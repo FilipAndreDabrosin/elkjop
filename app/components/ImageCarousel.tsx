@@ -4,8 +4,8 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 
 const images = [
-  { src: "/kundeklubb-weekly-campaign.avif", href: "/kundeklubb" },
-  { src: "/feel-good-weekly-campaign.avif", href: "/hjem" },
+  { src: "/kundeklubb-weekly-campaign.avif", href: "/" },
+  { src: "/feel-good-weekly-campaign.avif", href: "/" },
   {
     src: "/pixel-launch-weekly-campaign.avif",
     href: "/product/mobil-nettbrett-og-smartklokker/mobiltelefon/google-pixel-10",
