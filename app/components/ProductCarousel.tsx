@@ -30,7 +30,7 @@ const ProductCarousel: React.FC<ProductCarouselProps> = ({ products, title }) =>
 
   return (
     <div>
-      <h1 className="mt-5 ml-5 mb-6 md:text-3xl font-bold font-[Montserrat]">
+      <h1 className="mt-5 ml-5 mb-6 md:text-3xl font-bold font-montserrat">
         {(title)}
       </h1>
       <div className="bg-white">

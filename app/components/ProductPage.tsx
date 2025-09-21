@@ -35,7 +35,7 @@ const ProductPage: React.FC<ProductPageProps> = ({
         {/* Produkt Info */}
         <div className="space-y-6">
           <div>
-            <h1 className="text-3xl font-bold text-gray-900 font-[Montserrat]">
+            <h1 className="text-3xl font-bold text-gray-900 font-Montserrat">
               {product.name}
             </h1>
             <div className="flex items-center space-x-2">
